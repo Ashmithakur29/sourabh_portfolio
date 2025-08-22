@@ -24,6 +24,9 @@
     /* Transitions */
     --transition: all 0.3s ease;
     --transition-slow: all 0.5s ease;
+
+    --nav-h: 72px;              /* desktop navbar height */
+
 }
 
 

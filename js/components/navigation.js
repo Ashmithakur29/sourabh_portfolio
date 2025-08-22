@@ -2,7 +2,7 @@
 export function initializeNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-menu a');
 
     if (!hamburger || !navMenu) return;
 

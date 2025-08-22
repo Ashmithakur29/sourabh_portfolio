@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - [Sourabh Yadav]</title>
+    <meta name="description" content="Professional portfolio showcasing skills, projects, and experience">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css_pages/pages.css">
+    <link rel="stylesheet" href="book_meeting_service/meeting.css">
+
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ Use the v4 browser SDK from jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    // ✅ New init signature in v4
+    emailjs.init({ publicKey: "_apuOub-4KAtlJNDj" }); 
+    </script>
+
+
+</head>
+<body>
+    <!-- Main Container -->
+    <div id="app">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+        
+        <!-- Hero Section will be loaded here -->
+        <div id="hero-container"></div>
+        
+        <!-- About Section will be loaded here -->
+        <div id="about-container"></div>
+        
+        <!-- Skills Section will be loaded here -->
+        <div id="skills-container"></div>
+        
+        <!-- Projects Section will be loaded here -->
+        <div id="projects-container"></div>
+        
+        <!-- Contact Section will be loaded here -->
+        <div id="contact-container"></div>
+        
+        <!-- Meeting Section will be loaded here -->
+        <div id="meeting-container"></div>
+        
+        <!-- Footer will be loaded here -->
+        <div id="footer-container"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/componentLoader.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/router.js"></script>
+    <script type="module" src="js_pages/pages.js"></script>
+    <script src="book_meeting_service/meeting.js"></script>
+
+    <script>
+    // Smooth-scroll to #meeting after components load
+    (function () {
+        if (location.hash !== '#meeting') return;
+
+        const scrollToMeeting = () => {
+        const el = document.getElementById('meeting');
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return true;
+        }
+        return false;
+        };
+
+        if (scrollToMeeting()) return;
+
+        const obs = new MutationObserver(() => {
+        if (scrollToMeeting()) obs.disconnect();
+        });
+        obs.observe(document.documentElement, { childList: true, subtree: true });
+
+        setTimeout(() => obs.disconnect(), 6000);
+    })();
+    </script>
+
+
+</body>
+</html>

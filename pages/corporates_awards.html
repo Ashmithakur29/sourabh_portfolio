@@ -1,0 +1,92 @@
+<div class="page-container" role="main" id="main-content">
+  <div class="page-content">
+    <!-- Corporate Awards Section -->
+<section id="awards" class="awards" role="region" aria-labelledby="awards-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="awards-title" class="section-title">Corporate Awards & Recognition</h2>
+      <p class="page-subtitle">Celebrating achievements, industry recognition, and corporate partnerships </p>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="award-list">
+  <!-- Award Item -->
+  <div class="award-item">
+    <div class="award-logo">
+      <img src="assets/logos/samsung.png" alt="Samsung Logo">
+    </div>
+    <div class="award-details">
+      <h4 class="award-title">Winner: Creative Lab Contest</h4>
+      <p class="award-meta">Issued by Samsung R&D Institute India, Bangalore · May 2017</p>
+      <p class="award-associated">Associated with Samsung Electronics</p>
+      <p class="award-description">
+        C-Lab’17 (Yearly Intrapreneurial Idea contest across SRI-B, total 350+ ideas were submitted),
+        for the Idea “Carbon” (Eco-friendly information using Deep Learning & Augmented Reality).
+      </p>
+    </div>
+  </div>
+
+  <!-- Award Item -->
+  <div class="award-item">
+    <div class="award-logo">
+      <img src="assets/logos/samsung.png" alt="Samsung Logo">
+    </div>
+    <div class="award-details">
+      <h4 class="award-title">Samsung Citizen's Award</h4>
+      <p class="award-meta">Issued by Samsung R&D Institute India, Bangalore · Mar 2017</p>
+      <p class="award-associated">Associated with Samsung Electronics</p>
+      <p class="award-description">
+        Awarded for my outstanding contribution towards innovation and project commercialization.
+      </p>
+    </div>
+  </div>
+
+  <!-- Award Item -->
+  <div class="award-item">
+    <div class="award-logo">
+      <img src="assets/logos/samsung.png" alt="Samsung Logo">
+    </div>
+    <div class="award-details">
+      <h4 class="award-title">Employee of the Month</h4>
+      <p class="award-meta">Issued by Samsung Multimedia Team · Jun 2014</p>
+      <p class="award-associated">Associated with Samsung Electronics</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<script>
+// Award card animations
+document.addEventListener('DOMContentLoaded', function() {
+  const awardCards = document.querySelectorAll('.award-card');
+  
+  awardCards.forEach((card, index) => {
+    // Add staggered animation delay
+    card.style.animationDelay = `${index * 0.2}s`;
+    
+    // Add hover effects
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.02)';
+      this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+      this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.08)';
+    });
+  });
+  
+  // Add year badge functionality
+  awardCards.forEach(card => {
+    const year = card.getAttribute('data-year');
+    if (year) {
+      const yearBadge = document.createElement('span');
+      yearBadge.className = 'year-badge';
+      yearBadge.textContent = year;
+      card.appendChild(yearBadge);
+    }
+  });
+});
+</script>

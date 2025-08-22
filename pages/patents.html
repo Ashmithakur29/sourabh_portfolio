@@ -1,0 +1,139 @@
+<div class="page-container" role="main" id="main-content">
+  <!-- <div class="page-header">
+    <h1 class="page-title">Patents & Intellectual Property</h1>
+    <p class="page-subtitle">Innovation portfolio showcasing 15 patents in AI, Computer Vision, and Accessibility Technology</p>
+  </div> -->
+
+  <div class="page-content">
+<!-- Patents Section -->
+<section id="patents" class="patents" role="region" aria-labelledby="patents-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="patents-title" class="section-title">Patents</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <!-- Overview -->
+    <div class="patents-overview">
+      <div class="stats-row">
+        <div class="stat"><span class="num">15</span><span class="lbl">Total</span></div>
+        <div class="stat"><span class="num">4</span><span class="lbl">Granted </span></div>
+        <div class="stat"><span class="num">12</span><span class="lbl">Pending</span></div>
+      </div>
+    </div>
+
+
+    <!-- List (LinkedIn style) -->
+    <div class="patent-list" role="list">
+
+      <!-- GRANTED (US) -->
+      <article class="patent-row" role="listitem" data-status="granted-us">
+        <h4 class="title">A system and method to improve object detection accuracy by focus bracketing</h4>
+        <div class="meta">
+          <span class="number">US11995869B2</span>
+          <span class="dot">·</span>
+          <span class="issued">Issued May 28, 2024</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/patent/US11995869B2"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <article class="patent-row" role="listitem" data-status="granted-us">
+        <h4 class="title">Method and apparatus for image segmentation using an event sensor</h4>
+        <div class="meta">
+          <span class="number">US11263751B2</span>
+          <span class="dot">·</span>
+          <span class="issued">Issued Mar 1, 2023</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/patent/US11263751B2"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <article class="patent-row" role="listitem" data-status="granted-us">
+        <h4 class="title">Method of acquiring image and electronic device thereof</h4>
+        <div class="meta">
+          <span class="number">US9958285B2</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/patent/US9958285B2"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <!-- INTERNATIONAL (granted) -->
+      <article class="patent-row" role="listitem" data-status="international">
+        <h4 class="title">Electronic device for capturing media using a bendable display and method thereof</h4>
+        <div class="meta">
+          <span class="number">EP3794814B1</span>
+          <span class="dot">·</span>
+          <span class="issued">Issued Mar 20, 2024</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/patent/EP3794814B1"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <!-- PENDING (IN examples from screenshot) -->
+      <article class="patent-row" role="listitem" data-status="pending">
+        <h4 class="title">A system and method for producing spin view rendering of a given object of interest using hand‑held mobile device</h4>
+        <div class="meta">
+          <span class="number">IN 1431/CHE/2015</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/?q=IN+1431%2FCHE%2F2015"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <article class="patent-row" role="listitem" data-status="pending">
+        <h4 class="title">Method and system for grain assaying using RGB camera</h4>
+        <div class="meta">
+          <span class="number">IN 201841024812</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/?q=IN+201841024812"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <!-- Other inventors (from screenshot) -->
+      <article class="patent-row" role="listitem" data-status="pending">
+        <h4 class="title">System and method for estimating eco‑impact and recommending eco‑friendly products using augmented reality based application</h4>
+        <div class="meta">
+          <span class="number">IN 201741039651</span>
+        </div>
+        <a class="btn-ghost" href="https://patents.google.com/?q=IN+201741039651"
+           target="_blank" rel="noopener">See patent</a>
+      </article>
+
+      <!-- TODO: Add remaining items later -->
+    </div>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const search = document.getElementById('patent-search');
+  const chips  = document.querySelectorAll('.chip');
+  const rows   = document.querySelectorAll('.patent-row');
+
+  function applyFilters() {
+    const q = (search.value || '').toLowerCase();
+    const active = document.querySelector('.chip.active')?.dataset.filter || 'all';
+
+    rows.forEach(r => {
+      const txt = (r.querySelector('.title')?.textContent + ' ' +
+                   r.querySelector('.meta')?.textContent).toLowerCase();
+      const status = r.dataset.status; // granted-us | pending | international
+      const matchesText = !q || txt.includes(q);
+      const matchesTag  = active === 'all' || status === active;
+
+      r.style.display = (matchesText && matchesTag) ? 'grid' : 'none';
+    });
+  }
+
+  // events
+  if (search) search.addEventListener('input', applyFilters);
+  chips.forEach(c => c.addEventListener('click', () => {
+    chips.forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    applyFilters();
+  }));
+
+  applyFilters();
+});
+</script>

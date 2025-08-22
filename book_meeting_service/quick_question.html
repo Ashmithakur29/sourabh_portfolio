@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Have a Question? Quick Consult</title>
+<link rel="stylesheet" href="./meeting.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head><body class="meeting-page">
+
+<header class="service-hero">
+  <div class="service-breadcrumb"><a href="../index.html#meeting" aria-label="Back">← Back</a></div>
+  <div class="service-header">
+    <!-- <div class="avatar-badge">
+      <img src="https://i.pravatar.cc/120?img=5" alt="Mentor photo" class="avatar">
+      <span class="rating-badge" aria-label="rating 5 out of 5">★ 5/5</span>
+    </div> -->
+    <div class="title-wrap">
+      <h1 class="service-title">Have a Question? Quick Consult</h1>
+      <div class="meta-row">
+        <div class="price-chip"><span class="old">₹299</span><span class="now">₹199</span></div>
+        <div class="dot"></div><div class="duration">15 mins meeting</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="left-col" aria-labelledby="about-title">
+    <div class="chips"><span class="chip">Rapid Help</span><span class="chip">Debug</span><span class="chip">Decision</span></div>
+    <div class="testimonial">
+      Short, crisp consult to unblock you instantly—no fluff, just answers and next steps.    </div>
+
+    <h2 id="about-title">Perfect for</h2>
+    <ul class="bullet">
+      <li>“Which project should I pick?” type decisions</li>
+      <li>Quick resume/LinkedIn headline review</li>
+      <li>Concept doubt you want explained fast</li>
+      <li>Choosing a course or resource</li>
+    </ul>
+
+    <h3>Outcome</h3>
+    <ul class="bullet">
+      <li>Clear answer + 2–3 actionable next steps</li>
+      <li>Links/resources summarised after the call</li>
+    </ul>
+  </section>
+
+  <aside class="right-col" aria-label="Booking">
+    <div class="card" id="schedule-card">
+      <h3>When should we meet?</h3>
+      <div id="dateRow" class="date-row" role="radiogroup" aria-label="Pick a date"></div>
+      <label class="field-label">Select time of day</label>
+      <div id="timeGrid" class="time-grid" role="radiogroup" aria-label="Pick a time"></div>
+      <label class="field-label" for="tz">Timezone</label>
+      <select id="tz" class="select" aria-label="Timezone">
+        <option value="Asia/Kolkata">(GMT+5:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+        <option value="UTC">UTC</option><option value="Asia/Dubai">(GMT+4) Dubai</option>
+        <option value="America/New_York">(GMT-4) New York</option>
+      </select>
+      <button id="continueBtn" class="btn btn-continue-button">Continue</button>
+    </div>
+
+    <div class="card hidden" id="checkout-card">
+      <h3>Enter details</h3>
+      <form id="checkoutForm" novalidate>
+        <label class="field-label" for="name">Name</label>
+        <input id="name" class="input" placeholder="Enter your name" required/>
+        <label class="field-label" for="email">Email</label>
+        <input id="email" type="email" class="input" placeholder="Enter your email" required/>
+        <label class="field-label" for="phone">Phone number</label>
+        <div class="phone"><span class="flag" aria-hidden="true">🇮🇳</span><input id="phone" class="input no-m" placeholder="+91" required/></div>
+        <label class="checkbox"><input type="checkbox" checked/> <span>Receive booking details on phone</span></label>
+        <div class="summary">
+          <h4>Order Summary</h4>
+          <div class="row"><span id="summaryTitle">1 × Quick Consult</span><strong id="summaryPrice">₹199</strong></div>
+          <div class="row total"><span>Total</span><strong id="summaryTotal">₹199</strong></div>
+        </div>
+        <button type="submit" class="btn-pay">Confirm and Pay</button>
+      </form>
+    </div>
+  </aside>
+</main>
+
+<script>window.SERVICE_META={title:"Have a Question? Quick Consult",durationMins:15,priceNow:199,priceOld:299};</script>
+<script src="./meeting.js"></script>
+</body></html>

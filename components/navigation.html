@@ -4,7 +4,7 @@
         <div class="nav-logo">
             <h2>Portfolio</h2>
         </div>
-        <ul class="nav-menu" role="menubar">
+        <ul id="primary-menu" class="nav-menu" role="menubar">
             <li class="nav-item" role="none">
                 <a href="#home" class="nav-link" role="menuitem">Home</a>
             </li>
@@ -47,7 +47,10 @@
                 <a href="#meeting" class="nav-link nav-cta" role="menuitem">Book A Call</a>
             </li>
         </ul>
-        <div class="hamburger" aria-label="Toggle navigation menu">
+        <div class="hamburger" aria-label="Toggle navigation menu" type="button"
+        aria-label="Open menu"
+        aria-controls="primary-menu"
+        aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>

@@ -29,6 +29,8 @@
 
 }
 
+[hidden] { display: none !important; }
+
 
 /* loader */
 .page-loading { display:flex; align-items:center; gap:.75rem; padding:2rem 0; }

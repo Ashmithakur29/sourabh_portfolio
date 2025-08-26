@@ -458,6 +458,13 @@
   .book-panel{ transition:none; }
 }
 
+/* Center hero buttons on medium screens */
+@media (max-width: 1030px) and (min-width: 769px) {
+  .hero-buttons {
+    justify-content: center;   /* rows me center */
+  }
+}
+
 
 
 /* Optional subtle divider lines between columns on desktop */

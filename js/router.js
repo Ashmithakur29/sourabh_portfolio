@@ -9,9 +9,9 @@ const ROUTE_TO_FILE = {
   education: 'eductaion',
   patents: 'patents',
   papers: 'paper',
-  features: 'featurepost',
   events: 'events',
   corporates: 'corporates_awards',
+  skills: 'skills',
 };
 
 const PAGES  = Object.keys(ROUTE_TO_FILE);
@@ -20,6 +20,18 @@ const DEFAULT_ROUTE = 'experience';
 function getView() {
   return document.getElementById('app-main');
 }
+
+
+function ensureStylesheet(id, href) {
+  if (!document.getElementById(id)) {
+    const link = document.createElement('link');
+    link.id = id;
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+  }
+}
+
 
 function setLoading(on) {
   const VIEW = getView();
@@ -52,6 +64,11 @@ async function renderPage(id) {
     if (!VIEW) return; // viewport not ready yet
     VIEW.innerHTML = html;
 
+    // Page-specific styles (Skills needs its own component CSS)
+    if (id === 'skills') {
+       ensureStylesheet('skills-styles', 'css/components/skills.css');
+    }
+
     // Initialize page-specific JavaScript
     try {
       switch (id) {
@@ -59,10 +76,19 @@ async function renderPage(id) {
           const { initializeExperience } = await import('./components/experience.js');
           initializeExperience();
           break;
+        case 'skills':
+          try {
+            const skillsModule = await import('./components/skills.js');
+            if (typeof skillsModule.initializeSkills === 'function') {
+              skillsModule.initializeSkills();
+            }
+          } catch (e) {
+            console.warn('Skills initializer not found or failed:', e);
+          }
+          break;
         case 'education':
         case 'patents':
         case 'papers':
-        case 'features':
         case 'events':
         case 'corporates':
           const { initializePages } = await import('../js_pages/pages.js');
@@ -102,7 +128,7 @@ function parsePageRoute() {
 }
 
 function setHomeVisible(visible) {
-  const ids = ['#hero-container', '#about-container', '#skills-container', '#projects-container', '#contact-container', '#meeting-container'];
+  const ids = ['#hero-container', '#about-container', '#skills-container', '#projects-container', '#contact-container', '#meeting-container', '#page-container'];
   ids.forEach(sel => {
     const el = document.querySelector(sel);
     if (el) {

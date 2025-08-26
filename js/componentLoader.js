@@ -166,9 +166,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const allComponents = [
         'navigation',
         'hero',
+        'featurepost',
         'about',
-        'skills',
-        'experience',
         'projects',
         'contact',
         'meeting',
@@ -181,9 +180,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const componentList = [
         { name: 'navigation', target: '#navigation-container' },
         { name: 'hero', target: '#hero-container' },
+        { name: 'featurepost', target: '#page-container' },   // ✅ add this line
         { name: 'about', target: '#about-container' },
-        { name: 'skills', target: '#skills-container' },
-        { name: 'experience', target: '#experience-container' },
         { name: 'projects', target: '#projects-container' },
         { name: 'contact', target: '#contact-container' },
         { name: 'meeting', target: '#meeting-container' },

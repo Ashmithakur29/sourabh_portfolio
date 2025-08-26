@@ -14,10 +14,11 @@
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;                   /* NEW: logo & menu ke beech safety gap */
 }
 
 .nav-logo h2 {
@@ -30,8 +31,14 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: clamp(18px, 2.7vw, 37px);
     align-items: center;
+    flex-wrap: nowrap;           
+    margin-left: clamp(12px, 2vw, 28px); 
+}
+
+.nav-menu > li{
+  white-space: nowrap;    
 }
 
 .nav-link {
@@ -166,6 +173,11 @@
     z-index: 1;
 }
 
+#hero-container section#home {
+  transform: none !important;
+}
+
+
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
@@ -254,22 +266,6 @@
     pointer-events: none;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-}
-
-.scroll-arrow {
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--primary-green);
-    border-left: none;
-    border-top: none;
-    transform: rotate(45deg);
-}
 
 /* Support both spellings */
 .hero-stats { 

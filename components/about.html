@@ -1,42 +1,74 @@
 <!-- About Section -->
-<section id="about" class="about" role="region" aria-labelledby="about-title">
-    <div class="container">
-        <div class="section-header">
-            <h2 id="about-title" class="section-title">About Me</h2>
-            <div class="section-divider"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Principal Applied Scientist | Generative AI & Accessibility</h3>
-                <p>
-                    I'm Sourabh Yadav, driven by a passion for transforming accessibility through cutting-edge 
-                    advancements in Generative AI. With over a decade of experience in computer vision, AI, and 
-                    software product development, I bring deep expertise in Deep Learning, Augmented Reality, 
-                    and innovative problem solving.
-                </p>
-                <p>
-                    Currently serving as a <strong>Principal Applied Scientist at Oracle</strong>, I lead AI initiatives 
-                    for large-scale accessibility solutions. My career journey spans impactful roles at 
-                    <strong>Samsung R&D</strong> and <strong>Johnson Controls</strong>, where I delivered enterprise-grade 
-                    computer vision and deep learning solutions. 
-                </p>
-                <p>
-                    I hold 3 granted US patents (with 9 more pending), have published research, and won 
-                    corporate innovation challenges. As an IIT Kharagpur alumnus, I actively contribute to 
-                    accessibility advocacy through the <strong>Oracle Diverse Abilities Network</strong> and 
-                    <strong>Rotary Bangalore Abilities</strong>.
-                </p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years in AI & Computer Vision</span>
-                    </div>                    
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="assets\images\about_page.jpg" 
-                     alt="Sourabh Yadav working on AI projects" loading="lazy">
-            </div>
-        </div>
+<section id="about" class="about-modern" role="region" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <span class="title-for-all">
+            <p class="featured-intro">
+              Making tech usable for everyone by turning models & metrics into real-world, accessible AI . <br> one model at a time.
+            </p></span>
+      <div class="section-divider"></div>
     </div>
+
+    <div class="about-grid">
+      <!-- Left side: image + stat -->
+      <div class="about-left">
+        <div class="profile-wrapper">
+            <div class="profile-pic">
+            <img src="assets/images/about_page.jpg" 
+                alt="Sourabh Yadav - Principal Applied Scientist" loading="lazy">
+            </div>
+            <div class="about-stat" aria-label="Experience">
+            <span class="number">10+</span>
+            <span class="label">Years in AI & Vision</span>
+            </div>
+        </div>
+
+      </div>
+
+      <!-- Right side: heading + para + subheading + para + chips + CTA -->
+      <div class="about-right">
+        <!-- Bold heading -->
+        <h3 class="about-heading">Principal Applied Scientist | Generative AI & Accessibility</h3>
+
+        <!-- Paragraph under first heading -->
+        <p class="about-paragraph">
+          As a Principal Applied Scientist at  <span class="brand-oracle">Oracle</span>., I specialize in scaling generative and multimodal AI to solve critical accessibility challenges. I lead the transformation of cutting-edge research into robust, inclusive products that deliver tangible, real-world impact.
+        </p>
+
+        <!-- Second bold heading -->
+        <h4 class="about-subheading">Leadership & Mission</h4>
+
+        <!-- Paragraph under second heading -->
+        <p class="about-paragraph">
+          My leadership is focused on building high-trust teams with an owner's mindset. I am passionate about shipping world-class AI, mentoring top talent, and partnering with communities to establish accessibility as a core principle in technology.
+        </p>
+
+        <!-- Chips (above LinkedIn) -->
+        <div class="skill-chips" role="list" aria-label="Focus areas">
+          <span class="skill" role="listitem">
+            <i class="fa-solid fa-universal-access" aria-hidden="true"></i> Accessibility
+          </span>
+          <span class="skill" role="listitem">
+            <i class="fa-solid fa-robot" aria-hidden="true"></i> AI
+          </span>
+          <span class="skill" role="listitem">
+            <i class="fa-solid fa-user-tie" aria-hidden="true"></i> Leadership
+          </span>
+           <span class="skill" role="listitem">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Innovation
+          </span>
+        </div>
+
+        <!-- LinkedIn CTA -->
+        <div class="about-actions">
+          <a href="https://www.linkedin.com/in/sourabh-yadav-ai/"
+            class="btn-linkedin" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>

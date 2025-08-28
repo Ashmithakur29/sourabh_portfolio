@@ -27,6 +27,12 @@
 
     --nav-h: 72px;              /* desktop navbar height */
 
+    .title-for-all { 
+        display: block; 
+        font-size: 1.1rem; 
+        color: var(--text-dark); 
+        font-weight: 400;
+    }
 }
 
 [hidden] { display: none !important; }

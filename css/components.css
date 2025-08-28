@@ -332,67 +332,233 @@
 .stat-label span { display: block; }
 .stat-label .sub { color: var(--text-light); font-size: .85rem; }
 
-
-
-/* ===== ABOUT SECTION ===== */
-.about {
-    padding: var(--section-padding);
-    background: white;
+/* small "know more" line inside each box */
+.hero-stats .stat{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:.35rem;
+  text-decoration:none;        /* entire card is the link */
 }
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+.hero-stats .stat-more{
+  margin-top:.25rem;
+  font-size:.82rem;
+  color:var(--primary-green);
+  text-decoration: underline;
+  text-underline-offset:.16em;
+  display:inline-flex;
+  align-items:center;
+  gap:.3rem;
+  opacity:.9;
 }
 
-.about-text h3 {
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
+.hero-stats .stat:hover .stat-more{
+  color:var(--accent-gold);
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+.hero-stats .stat-more .arrow{
+  transition: transform .15s ease;
+}
+.hero-stats .stat:hover .stat-more .arrow{
+  transform: translateX(3px);
 }
 
-.stat {
+.hero-stats .stat-more{
+  white-space: nowrap;         /* no wrapping */
+  line-height: 1;              /* tighter line box */
+}
+
+/* optional: on very small phones, thoda font chhota */
+@media (max-width: 400px){
+  .hero-stats .stat-more{
+    font-size: .78rem;
+  }
+}
+
+/* mobile center align (optional) */
+@media (max-width:600px){
+  .hero-stats .stat-more{ justify-content:center; }
+}
+
+
+/* ===== About Section (Light Theme) ===== */
+.about-modern {
+  padding: var(--section-padding);
+  background: #fff;
+  color: var(--text-dark);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+  align-items: center;
+  align-items: start;          
+}
+
+/* Left image */
+
+.profile-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px; 
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(26,71,42,.1);
+  display: block;
+  /* stronger, layered shadow */
+  box-shadow:
+    0 32px 64px rgba(26,71,42,.18),
+    0 12px 28px rgba(26,71,42,.12);
+}
+
+.about-stat {
+  width: 100%;             
+  max-width: 380px;
+  margin-top: 1.5rem;
+  text-align: center;
+  background: var(--off-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.about-stat .number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+.about-stat .label {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.chip{
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .7rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  font-weight: 700;
+  font-size: clamp(.8rem, .75rem + .2vw, .9rem);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  pointer-events: none; /* purely decorative */
+}
+.chip i{ font-size: .95rem; }
+
+/* chip positions (tweak if needed) */
+.chip--tl{ top: -10px; left: -10px; }
+.chip--mr{ top: 18%; right: -12px; }
+.chip--bl{ bottom: 16%; left: -12px; }
+
+/* Mobile: chips stack below image for clarity */
+@media (max-width: 992px){
+  .chip{ position: static; margin: .35rem .35rem 0 0; }
+  .profile-wrapper{ align-items: center; }
+}
+
+/* Right content */
+.about-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-green);
+}
+.about-bio {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.brand-oracle{
+  color: #d32f2f;      /* accessible red */
+  font-weight: 700;
+}
+
+
+/* paragraphs + second heading */
+.about-paragraph{
+  margin: .35rem 0 1rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+.about-subheading{
+  margin: .25rem 0 .4rem;
+  font-weight: 800;
+  font-size: clamp(1.05rem, .95rem + .4vw, 1.25rem);
+  color: var(--primary-green);
+}
+
+/* chips row (above LinkedIn) */
+.skill-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem .75rem;
+  margin: .25rem 0 1.1rem;
+}
+.skill{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .45rem .85rem;
+  border-radius: 999px;
+  background: var(--off-white);
+  border: 1px solid var(--border-color);
+  color: var(--charcoal);
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+.skill i{ color: var(--primary-green); }
+
+/* keep Oracle red */
+.brand-oracle{ color:#d32f2f; font-weight:700; }
+
+/* responsive tidy-up */
+@media (max-width: 992px){
+  .about-paragraph{ text-align: left; }  /* optional */
+}
+
+
+
+
+/* Button */
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .65rem 1.2rem;
+  background: #0a66c2;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .3s ease;
+}
+.btn-linkedin:hover { background: #004182; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 1.5rem;
-    background: var(--off-white);
-    border-radius: 15px;
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
+  }
+  .about-actions { justify-content: center; }
 }
 
-.stat:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(26, 71, 42, 0.1);
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    font-family: var(--font-primary);
-}
-
-.stat-label {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.about-image img {
-    width: 80%;
-    height: 70%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(26, 71, 42, 0.1);
-}
 
 /* ===== SKILLS SECTION ===== */
 .skills { 

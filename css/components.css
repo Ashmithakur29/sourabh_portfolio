@@ -292,6 +292,7 @@
   padding: .5rem .25rem;
   border-radius: 12px;
   outline: none;
+  min-height: 160px; 
 }
 
 .stat:focus-visible {
@@ -302,6 +303,11 @@
 .stat:hover {
   transform: translateY(-1px);
   transition: var(--transition);
+  box-shadow: 
+    0 20px 40px var(--black-a04),
+    0 8px 16px var(--primary-green-a20),
+    0 0 0 1px var(--primary-green-a20);
+  background: var();
 }
 
 .stat-value {
@@ -354,7 +360,7 @@
 }
 
 .hero-stats .stat:hover .stat-more{
-  color:var(--accent-gold);
+  color:var(--primary-green);
 }
 
 .hero-stats .stat-more .arrow{
@@ -380,6 +386,64 @@
 @media (max-width:600px){
   .hero-stats .stat-more{ justify-content:center; }
 }
+
+/* Row: centered by default */
+.employer-logos{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: clamp(1rem, 2.2vw, 2.25rem);   /* bigger spacing */
+  flex-wrap:nowrap;
+  white-space:nowrap;
+  margin:.9rem auto 1.25rem;
+}
+
+
+/* Each logo wrapper */
+.logo-item{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Active/current dot (green) */
+.logo-item.is-current::before{
+  content:"";
+  position:absolute;
+  top:-6px; left:-6px;              /* dot at top-left of the logo */
+  width:12px; height:12px;
+  border-radius:50%;
+  background: var(--success-green, #22c55e);  /* use your token if you have one */
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.9),            /* white ring so it pops on dark bg */
+    0 0 0 6px rgba(34,197,94,.18);             /* soft glow */
+}
+
+/* Logos: larger size, always color, no hover movement */
+.employer-logos img{
+  height: clamp(36px, 3.4vw, 56px); /* bigger logos */
+  width:auto !important;
+  max-width:none !important;
+  flex:0 0 auto;
+  object-fit:contain;
+  display:inline-block;
+  filter:none !important;
+  opacity:1 !important;
+  transform:none !important;
+  transition:none;
+}
+
+/* Small screens: still centered, slightly smaller */
+@media (max-width:560px){
+  .employer-logos{ gap:.9rem; }
+  .employer-logos img{ height:28px; }
+}
+/* mobile: center whole row (label + logos) */
+@media (max-width: 640px){
+  .employer-logos{ justify-content:center; }
+}
+
 
 
 /* ===== About Section (Light Theme) ===== */
@@ -588,7 +652,7 @@
   background: var(--white);
   border-radius:20px;
   padding:1.5rem;
-  border:1px solid var(--accent-gold-a25);
+  border:1px solid var(--primary-color);
   box-shadow:0 10px 24px var(--black-a06);
   transition: transform .25s ease, box-shadow .25s ease;
 }

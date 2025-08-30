@@ -52,11 +52,11 @@
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color:  --white;
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px var(--black-a05);
         padding: 2rem 0;
     }
     
@@ -428,6 +428,24 @@
     }
 }
 
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+      --primary-green: #000000;
+      --text-light: #333333;
+      --border-color: #666666;
+  }
+}
+
+/* Accessibility: global reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 /* High contrast focus for accessibility */
 @media (prefers-contrast: more) {
   .skill-chip:focus-visible {
@@ -495,4 +513,29 @@
 /* reserve space for the fixed navbar so content doesn't hide under it */
 body{
   padding-top: var(--nav-h);
+}
+
+/* === Hero stats: mobile behavior === */
+@media (max-width: 560px){
+  .hero-stats{
+    display: grid;
+    grid-auto-flow: column;          
+    grid-auto-columns: 78%;           
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;    
+    padding: 12px 8px 14px;
+    background: transparent;          
+  } 
+}
+
+/* Optional: super-small phones—stack vertically instead of horizontal scroll */
+@media (max-width: 360px){
+  .hero-stats{
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+  }
 }

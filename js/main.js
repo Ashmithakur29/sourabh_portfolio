@@ -237,6 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
     initializeTheme();
     
+    // Update copyright year
+    updateCopyrightYear();
+    
     // Track initial page view
     trackPageView('Portfolio Home');
     

@@ -64,9 +64,46 @@ export function initializeFooter() {
     }
 
     // Copyright year update
-    const copyrightYear = document.querySelector('.copyright-year');
+    const copyrightYear = document.querySelector('.copyright-year') || document.getElementById('copyright-year');
     if (copyrightYear) {
-        copyrightYear.textContent = new Date().getFullYear();
+        const currentYear = new Date().getFullYear();
+        copyrightYear.textContent = currentYear;
+        console.log('Footer JS: Copyright year updated to:', currentYear);
+    } else {
+        console.warn('Footer JS: Copyright year element not found');
+        // Try to find it again after a short delay
+        setTimeout(() => {
+            const retryElement = document.querySelector('.copyright-year') || document.getElementById('copyright-year');
+            if (retryElement) {
+                const currentYear = new Date().getFullYear();
+                retryElement.textContent = currentYear;
+                console.log('Footer JS: Copyright year updated on retry to:', currentYear);
+            } else {
+                console.error('Footer JS: Copyright year element still not found after retry');
+            }
+        }, 100);
+    }
+
+    // Add mutation observer to watch for DOM changes
+    const footerContainer = document.querySelector('.footer');
+    if (footerContainer) {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'childList') {
+                    const copyrightYear = document.querySelector('.copyright-year') || document.getElementById('copyright-year');
+                    if (copyrightYear && !copyrightYear.textContent) {
+                        const currentYear = new Date().getFullYear();
+                        copyrightYear.textContent = currentYear;
+                        console.log('Footer JS: Copyright year updated via mutation observer to:', currentYear);
+                    }
+                }
+            });
+        });
+        
+        observer.observe(footerContainer, {
+            childList: true,
+            subtree: true
+        });
     }
 
     // Back to top animation

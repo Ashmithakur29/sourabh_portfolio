@@ -353,7 +353,7 @@
 .btn-cta{
   justify-self:start; display:inline-flex; align-items:center; gap:.5rem;
   padding:.68rem 1.15rem; border-radius:999px;
-  background: var(--accent-gold); color: var(--white); font-weight:900; text-decoration:none;
+  background: var(--accent-gold); color: var(--black); font-weight:900; text-decoration:none;
   box-shadow: 0 12px 28px var(--accent-gold-a28);
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
 }
@@ -509,7 +509,7 @@
 
 .post-body{ padding:16px 16px 18px; display:grid; gap:.6rem; }
 .post-title{
-  margin:0; color:var(--deep-navy); font-weight:900; line-height:1.25;
+  margin:0; color:var(--primary-color); font-weight:900; line-height:1.25;
   font-size: clamp(1.05rem, .95rem + .4vw, 1.25rem);
 }
 .post-meta{

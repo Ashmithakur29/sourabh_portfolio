@@ -35,6 +35,7 @@
     align-items: center;
     flex-wrap: nowrap;           
     margin-left: clamp(12px, 2vw, 28px); 
+    background-color: var(--white);
 }
 
 .nav-menu > li{

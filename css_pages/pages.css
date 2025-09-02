@@ -72,16 +72,16 @@
 
 .edu-institution{
   margin: 0 0 0.25rem;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.49rem;
+  font-weight: 900;
   color: var(--primary-green);
 }
 
 .edu-meta{
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--text-muted);
+  font-size: 1.0rem;
+  line-height: 1.9;
+  color: var(--black);
 }
 
 .edu-toggle{
@@ -318,7 +318,7 @@
     linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
 }
 .papers .section-title{
-  text-align:center; font-family:var(--font-primary); font-weight:900;
+  text-align:center; font-family:var(--font-primary); font-weight:900; font-size: 3rem;
 }
 .section-divider{ width:84px;height:4px;margin:12px auto 24px;border-radius:999px;background:var(--accent-gold); }
 
@@ -502,7 +502,7 @@
 
 .post-badge{
   position:absolute; right:12px; top:12px;
-  background:var( --primary-green); color: var(--text-dark); font-weight:900;
+  background:var( --primary-green); color: var(--white); font-weight:900;
   padding:.35rem .65rem; border-radius:999px; font-size:.8rem;
   box-shadow:0 8px 18px var(--accent-gold-a28);
 }
@@ -510,14 +510,14 @@
 .post-body{ padding:16px 16px 18px; display:grid; gap:.6rem; }
 .post-title{
   margin:0; color:var(--primary-color); font-weight:900; line-height:1.25;
-  font-size: clamp(1.05rem, .95rem + .4vw, 1.25rem);
+  font-size: clamp(1.05rem, .99rem + .4vw, 1.25rem);
 }
 .post-meta{
-  color:var(--text-light); font-weight:700; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+  color:var(--text-muted); font-weight:700; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
 }
 .post-meta .dot{ opacity:.55 }
 
-.post-excerpt{ margin:.1rem 0 0; color:var(--text-dark); line-height:1.6; }
+.post-excerpt{ margin:.1rem 0 0; color:var(--avg--light); line-height:1.6; }
 
 .post-tags{ list-style:none; padding:0; margin:.3rem 0 0; display:flex; flex-wrap:wrap; gap:.45rem; }
 .post-tags li{
@@ -538,7 +538,7 @@
 .btn-ghost:hover{ transform: translateY(-1px); border-color:var( --primary-green); color:var( --secondary-green); }
 
 .btn-solid{
-  background:var(--accent-gold); color: var(--text-dark); border:1.5px solid transparent;
+  background:var(--accent-gold); color: var(--white); border:1.5px solid transparent;
   box-shadow:0 10px 24px var(--accent-gold-a28);
 }
 .btn-solid:hover{ transform: translateY(-1px); box-shadow:0 16px 34px var(--accent-gold-a32); }
@@ -760,7 +760,7 @@
 
 .page-subtitle {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: var(--black);
   font-weight: 400;
   animation: fadeIn 1s ease-out 0.8s both;
 }

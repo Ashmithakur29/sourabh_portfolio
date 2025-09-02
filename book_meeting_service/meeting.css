@@ -365,7 +365,7 @@ body.meeting-page {
   font-weight: 700; 
 }
 
-h2 { 
+/* h2 { 
   margin-top: 32px; 
   font-size: 1.6rem; 
   font-family: var(--font-primary); 
@@ -374,7 +374,7 @@ h2 {
   background-clip: text;
   color: transparent;
   font-weight: 700;
-}
+} */
 
 h3 { 
   margin-top: 24px; 
@@ -543,7 +543,7 @@ h3 {
 /* =========================
    BUTTONS (stunning gradients)
    ========================= */
-.btn { 
+/* .btn { 
   display: inline-block; 
   font-weight: 700; 
   border: none; 
@@ -628,7 +628,7 @@ h3 {
 .btn-pay:hover::before {
   width: 300px;
   height: 300px;
-}
+} */
 
 /* Order summary */
 .summary {

@@ -1,90 +1,91 @@
-/* ===== CSS VARIABLES ===== */
+/* ===== CSS VARIABLES - BLACK & WHITE THEME ===== */
 :root {
-    /* Black Theme with Your Color Palette */
-    --primary-green: #468A9A;           /* Teal blue from your palette */
-    --secondary-green: #6BA4B2;        /* Lighter teal variant */
-    --accent-gold: #541212;            /* Dark red from your palette */
-    --warm-gold: #6B1F1F;              /* Lighter dark red variant */
-    --deep-navy: #000000;              /* Pure black background */
-    --cream: #0F0E0E;                  /* Very dark grey surface */
-    --off-white: #000000;              /* Pure black background */
-    --charcoal: #EEEEEE;               /* Light grey from your palette */
-    --text-dark: #EEEEEE;              /* Light grey text on black */
-    --text-light: #CCCCCC;             /* Slightly darker grey text */
-    --text-muted: #999999;             /* Muted grey text */
-    --border-color: #333333;           /* Dark grey borders */
+    /* Black & White Theme */
+    --primary-green: #FFFFFF;              /* Pure white */
+    --secondary-green: #F5F5F5;            /* Light white variant */
+    --accent-gold: #FFFFFF;                /* Pure white accent */
+    --warm-gold: #E5E5E5;                  /* Slightly off white */
+    --deep-navy: #000000;                  /* Pure black background */
+    --cream: #1A1A1A;                      /* Very dark grey surface */
+    --off-white: #000000;                  /* Pure black background */
+    --charcoal: #FFFFFF;                   /* Pure white text */
+    --text-dark: #FFFFFF;                  /* Pure white text */
+    --text-light: #F0F0F0;                 /* Light white text */
+    --text-muted: #959191;                 /* Light grey text */
+    --border-color: #333333;               /* Dark grey borders */
+    --avg--light:  #dfdfdf;
 
     /* Dark Surfaces */
-    --surface: #0F0E0E;                /* Very dark grey card backgrounds */
-    --surface-hover: #1A1A1A;          /* Hover states */
-    --surface-200: #2A2A2A;            /* Elevated surfaces */
-    --surface-300: #1A1A1A;            /* Input backgrounds */
-    --neutral-100: #0F0E0E;            /* Neutral surface */
-    --tag-warm-bg: #541212;            /* Dark red background */
+    --surface: #1A1A1A;                    /* Dark grey card backgrounds */
+    --surface-hover: #2A2A2A;              /* Hover states */
+    --surface-200: #333333;                /* Elevated surfaces */
+    --surface-300: #1A1A1A;                /* Input backgrounds */
+    --neutral-100: #1A1A1A;                /* Neutral surface */
+    --tag-warm-bg: #FFFFFF;                /* White tag background */
 
-    /* Cross-page aliases - Black theme */
-    --primary-color: #468A9A;          /* Teal blue */
-    --accent-orange: #541212;          /* Dark red accent */
-    --text-secondary: #CCCCCC;         /* Grey secondary text */
-    --text-primary: #EEEEEE;           /* Primary light text */
-    --page-bg: #000000;               /* Pure black page background */
+    /* Cross-page aliases - Black & White theme */
+    --primary-color: #FFFFFF;              /* Pure white */
+    --accent-orange: #FFFFFF;              /* White accent */
+    --text-secondary: #F0F0F0;             /* Light white secondary text */
+    --text-primary: #FFFFFF;               /* Pure white primary text */
+    --page-bg: #000000;                    /* Pure black page background */
 
     /* Common neutrals */
-    --white: #000000;                  /* Black for dark theme */
-    --black: #EEEEEE;                  /* Light grey for dark theme */
+    --white: #000000;                      /* Black for dark theme */
+    --black: #FFFFFF;                      /* White for dark theme */
 
-    /* Brand/link colors - Using your palette */
-    --linkedin-blue: #468A9A;          /* Teal blue */
-    --linkedin-blue-deep: #2A5A65;     /* Deeper teal variant */
-    --brand-oracle: #ec2f2f;           /* red */
-    --gold-light: #468A9A;             /* Teal blue as gold replacement */
-    --amber-dark: #541212;             /* Dark red as amber replacement */
-    --tag-popular-bg: #0F0E0E;         /* Very dark grey tag background */
-    --tag-popular-text: #EEEEEE;       /* Light grey text */
-    --tag-popular-border: #468A9A;     /* Teal border */
+    /* Brand/link colors - Black & White */
+    --linkedin-blue: #FFFFFF;              /* White */
+    --linkedin-blue-deep: #E5E5E5;         /* Light grey variant */
+    --brand-oracle: #bc0303;               /* White */
+    --gold-light: #FFFFFF;                 /* White */
+    --amber-dark: #E5E5E5;                 /* Light grey */
+    --tag-popular-bg: #1A1A1A;             /* Dark grey tag background */
+    --tag-popular-text: #FFFFFF;           /* White text */
+    --tag-popular-border: #FFFFFF;         /* White border */
 
-    /* Alpha tokens for black theme */
-    --primary-green-a12: rgba(70,138,154,.12);    /* Teal alpha */
-    --primary-green-a18: rgba(70,138,154,.18);
-    --primary-green-a20: rgba(70,138,154,.20);
-    --primary-green-a30: rgba(70,138,154,.30);
-    --primary-green-a40: rgba(70,138,154,.40);
-    --primary-green-a35: rgba(70,138,154,.35);
+    /* Alpha tokens for black & white theme */
+    --primary-green-a12: rgba(255,255,255,.12);    /* White alpha */
+    --primary-green-a18: rgba(255,255,255,.18);
+    --primary-green-a20: rgba(255,255,255,.20);
+    --primary-green-a30: rgba(255,255,255,.30);
+    --primary-green-a40: rgba(255,255,255,.40);
+    --primary-green-a35: rgba(255,255,255,.35);
 
-    --accent-gold-a12: rgba(84,18,18,.12);        /* Dark red alpha */
-    --accent-gold-a15: rgba(84,18,18,.15);
-    --accent-gold-a18: rgba(84,18,18,.18);
-    --accent-gold-a20: rgba(84,18,18,.20);
-    --accent-gold-a22: rgba(84,18,18,.22);
-    --accent-gold-a25: rgba(84,18,18,.25);
-    --accent-gold-a28: rgba(84,18,18,.28);
-    --accent-gold-a30: rgba(84,18,18,.30);
-    --accent-gold-a32: rgba(84,18,18,.32);
-    --accent-gold-a35: rgba(84,18,18,.35);
-    --accent-gold-a40: rgba(84,18,18,.40);
+    --accent-gold-a12: rgba(255,255,255,.12);        /* White alpha */
+    --accent-gold-a15: rgba(255,255,255,.15);
+    --accent-gold-a18: rgba(255,255,255,.18);
+    --accent-gold-a20: rgba(255,255,255,.20);
+    --accent-gold-a22: rgba(255,255,255,.22);
+    --accent-gold-a25: rgba(255,255,255,.25);
+    --accent-gold-a28: rgba(255,255,255,.28);
+    --accent-gold-a30: rgba(255,255,255,.30);
+    --accent-gold-a32: rgba(255,255,255,.32);
+    --accent-gold-a35: rgba(255,255,255,.35);
+    --accent-gold-a40: rgba(255,255,255,.40);
 
     --deep-navy-a25: rgba(0,0,0,.25);             /* Black alpha */
 
     /* Dark overlay alphas */
-    --black-a04: rgba(238,238,238,.04);
-    --black-a05: rgba(238,238,238,.05);
-    --black-a06: rgba(238,238,238,.06);
-    --black-a08: rgba(238,238,238,.08);
-    --black-a10: rgba(238,238,238,.10);
-    --black-a12: rgba(238,238,238,.12);
-    --black-a14: rgba(238,238,238,.14);
-    --black-a15: rgba(238,238,238,.15);
-    --black-a20: rgba(238,238,238,.20);
-    --black-a22: rgba(238,238,238,.22);
-    --black-a24: rgba(238,238,238,.24);
-    --black-a25: rgba(238,238,238,.25);
-    --black-a28: rgba(238,238,238,.28);
-    --black-a30: rgba(238,238,238,.30);
-    --black-a40: rgba(238,238,238,.40);
+    --black-a04: rgba(255,255,255,.04);
+    --black-a05: rgba(255,255,255,.05);
+    --black-a06: rgba(255,255,255,.06);
+    --black-a08: rgba(255,255,255,.08);
+    --black-a10: rgba(255,255,255,.10);
+    --black-a12: rgba(255,255,255,.12);
+    --black-a14: rgba(255,255,255,.14);
+    --black-a15: rgba(255,255,255,.15);
+    --black-a20: rgba(255,255,255,.20);
+    --black-a22: rgba(255,255,255,.22);
+    --black-a24: rgba(255,255,255,.24);
+    --black-a25: rgba(255,255,255,.25);
+    --black-a28: rgba(255,255,255,.28);
+    --black-a30: rgba(255,255,255,.30);
+    --black-a40: rgba(255,255,255,.40);
 
     /* Light overlays for contrast */
-    --near-black: #0F0E0E;             /* Very dark grey */
-    --near-black-a95: rgba(15,14,14,.95);
+    --near-black: #1A1A1A;                 /* Very dark grey */
+    --near-black-a95: rgba(26,26,26,.95);
 
     /* Dark overlays */
     --white-a95: rgba(0,0,0,.95);
@@ -94,26 +95,27 @@
     --white-a30: rgba(0,0,0,.30);
     --white-a20: rgba(0,0,0,.20);
 
-    /* Your Color Palette */
-    --palette-black: #0F0E0E;          /* Very dark grey (close to black) */
-    --palette-dark-red: #541212;       /* Dark red */
-    --palette-teal: #468A9A;           /* Teal blue */
-    --palette-light-grey: #EEEEEE;     /* Light grey */
+    /* Black & White Color Palette */
+    --palette-black: #1A1A1A;              /* Dark grey surface */
+    --palette-dark-red: #FFFFFF;           /* Pure white (replacing red) */
+    --palette-teal: #FFFFFF;               /* Pure white (replacing teal) */
+    --palette-light-grey: #FFFFFF;         /* Pure white */
 
-    /* Glow effects using your colors */
-    --teal-glow: 0 0 20px rgba(70,138,154,.4);
-    --red-glow: 0 0 20px rgba(84,18,18,.4);
-    --grey-glow: 0 0 20px rgba(238,238,238,.2);
+    /* Glow effects using white */
+    --teal-glow: 0 0 20px rgba(255,255,255,.4);
+    --red-glow: 0 0 20px rgba(255,255,255,.4);
+    --grey-glow: 0 0 20px rgba(255,255,255,.2);
+    --white-glow: 0 0 20px rgba(255,255,255,.5);
 
     /* Misc */
     --transparent: transparent;
     
     /* Typography */
-    --font-primary: 'Playfair Display', serif;
-    --font-secondary: 'Inter', sans-serif;
+    --font-primary: 'Sans Serif Collection', sans-serif;
+    --font-secondary: 'Sans Serif Collection', sans-serif;
     
     /* Spacing */
-    --section-padding: 80px 0;
+    --section-padding: 50px 0;
     --container-padding: 0 20px;
     
     /* Transitions */
@@ -125,7 +127,7 @@
     .title-for-all { 
         display: block; 
         font-size: 1.1rem; 
-        color: var(--text-dark); 
+        color: var(--text-muted); 
         font-weight: 400;
     }
 }
@@ -189,14 +191,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
+h2 { font-size: 3rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.5rem; }
 
-p {
-    margin-bottom: 1rem;
-    color: var(--text-light);
-}
+
 
 /* ===== CONTAINER ===== */
 .container {
@@ -223,25 +222,24 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--palette-teal), var(--secondary-green));
-    color: white;
-    box-shadow: var(--teal-glow);
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black); 
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(70,138,154,.6);
+    box-shadow: var(--red-glow);
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, var(--palette-dark-red), var(--warm-gold));
-    color: var(--palette-light-grey);
-    box-shadow: var(--red-glow);
+    color: var(--white);
 }
 
 .btn-secondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(84,18,18,.6);
+    box-shadow: var(--red-glow);
 }
 
 .btn-outline {

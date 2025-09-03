@@ -33,6 +33,7 @@
     /* Common neutrals */
     --white: #000000;                      /* Black for dark theme */
     --black: #FFFFFF;                      /* White for dark theme */
+    --some-major-color: rgb(59, 245, 59);
 
     /* Brand/link colors - Black & White */
     --linkedin-blue: #FFFFFF;              /* White */
@@ -125,10 +126,13 @@
     --nav-h: 72px;              /* desktop navbar height */
 
     .title-for-all { 
+        margin-top: 1rem;
         display: block; 
         font-size: 1.1rem; 
         color: var(--text-muted); 
         font-weight: 400;
+        letter-spacing: .1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -258,12 +262,12 @@ h4 { font-size: 1.5rem; }
 /* ===== SECTION STYLES ===== */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .section-title {
     color: var(--palette-teal);
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     position: relative;
 }
 

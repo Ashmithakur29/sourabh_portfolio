@@ -12,7 +12,7 @@
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -189,7 +189,7 @@
 .greeting {
     display: block;
     font-size: 1.9rem;
-    color: var(--text-muted);
+    color: var(--black);
     font-weight: 800;
     margin-bottom: 0.9rem;
 }
@@ -562,6 +562,7 @@
   color: var(--text-light);
   line-height: 1.65;
   font-size: 1rem;
+  letter-spacing: 0.05rem;
 }
 .about-subheading{
   margin: .25rem 0 .4rem;
@@ -652,7 +653,7 @@
 }
 
 .skill-card {
-  background: var(--white);
+  background: var(--black-a10);
   border-radius:20px;
   padding:1.5rem;
   border:1px solid var(--primary-color);
@@ -846,6 +847,11 @@
     overflow: hidden;
 }
 
+.project-p{
+  color: var(--avg--light);
+  letter-spacing: 0.05rem;
+}
+
 .project-image img {
     width: 100%;
     height: 100%;
@@ -948,7 +954,7 @@
   grid-template-columns: 48px 1fr auto;
   gap: 1rem;
   align-items: center;
-  background: var(--white);
+  background: var(--black-a10);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1rem;
@@ -961,12 +967,16 @@
   margin: 0;
   font-family: var(--font-primary);
   font-weight: 900;
+  font-size: 1.5rem;
   color: var(--text-dark);
 }
 
+.exp-duration{
+  color: var(--text-muted);
+}
 .exp-meta{
   margin: .25rem 0 0;
-  color: var(--text-light);
+  color: var(--avg--light);
   font-size: .95rem;
 }
 
@@ -982,7 +992,7 @@
 
 /* body */
 .exp-body{
-  background: var(--white);
+  background: var(--black-a10);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1rem 1.25rem 1.25rem;
@@ -990,7 +1000,7 @@
   box-shadow: 0 14px 28px var(--black-a06);
 }
 
-.exp-summary{ margin: .25rem 0 1rem; color: var(--text-dark); }
+.exp-summary{ margin: .25rem 0 1rem; color: var(--text-dark);letter-spacing: 0.05rem; }
 
 .exp-badges{ display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom: .75rem; }
 .badge{
@@ -1002,8 +1012,8 @@
 }
 
 .exp-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
-.exp-subtitle{ margin:.25rem 0 .35rem; font-weight:800; color: var(--deep-navy); }
-.exp-list{ margin:.25rem 0 0 1rem; }
+.exp-subtitle{ margin:.25rem 0 .35rem; font-weight:800; color: var(--black); }
+.exp-list{ margin:.25rem 0 0 1rem; color: var(--avg--light); letter-spacing: 0.05rem;}
 
 /* entrance animation */
 @keyframes expIn {
@@ -1049,6 +1059,7 @@
 
 .contact_subheading{
     color: var(--text-muted) ;
+    letter-spacing: 0.05rem;
 }
 
 .contact-details {
